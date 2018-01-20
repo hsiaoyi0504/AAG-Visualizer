@@ -224,7 +224,7 @@ document.getElementById('btn').addEventListener('click', handleFileSelected);
 
 <img src="./animate.gif" width="500"/>
 
-**Write 10 lines of code but impress all the user who step into your website.
+**Write 10 lines of code yet impress all the user who step into your website.
 Why not?** 
 
 ❤ If this post was helpful, please hit the little heart!
