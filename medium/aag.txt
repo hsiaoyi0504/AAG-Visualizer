@@ -1,0 +1,37 @@
+The format of an AAG file:
+
+The file is used to describe a logical circuit.
+Each gate is assigned a gate number, while gate number 0 is the constant 0 gate by default.
+
+The first line is the header, which contains information of the circuit, including number of each type of gates, and the maximum gate number.
+The header is written in the below format :
+aag M I L O A  
+While:
+M is the maximum gate number (excluding outputs).
+I is the number of input pins.
+L is the number of latches.
+O is the number of output pins.
+A is the number of AND gates.
+
+Please note that additional spaces is not permitted.
+
+The following lines are the input pins, which are listed by their literals:
+
+Literals are used to declare whether the singal has been inverted.
+For gate number N, its non-inverted literal is 2N, while its inverted literal is 2N+1.
+Since input pins are never inverted, the literal is always even.
+For example, if the circuit has input gate number 1 and 3, the file would list.
+2
+6
+as the input section.
+
+The output gates of the circuits is always numbered from M+1 to M+O, and in the file, the output gates are listed by their signal source literals, sorted by gate number.
+For example, if M=5, and output gate 6 reveals the value of gate 4, while output gate 7 sends out constant 1 signal, the output section would look as follows:
+8
+1
+
+Following the above is the AIG sections, each line consists the gate literal, followed by their fanin literals.
+If the file contains the below information:
+8 1 3
+10 9 6
+It means that gate 4 has fanin constant 1 and the inverted signal of gate 1, while gate 5's inputs are connected to the invert of the previous gate and gate 3.
