@@ -7,9 +7,10 @@
 
 
 ## 0. Table of Contents  
-- [Setup AAG-Visualizer](#1-setup-boilerplate)
+- [Setup AAG-Visualizer](#1-setup-aag-visualizer)
 - [Development and Production](#2-development-and-production)
-- [Credits](#3-Credits)
+- [Credits](#3-credits)
+- [License](#4-license)
  
 ## 1. Setup AAG-Visualizer
 ```
@@ -34,4 +35,8 @@ npm start
 ```
 
 ## 3. Credits
-- fantastic graphing library [viz.js](https://github.com/mdaines/viz.js)
+- Fantastic graphviz library [viz.js](https://github.com/mdaines/viz.js)
+- Best css animation library ever [animate.css](https://github.com/daneden/animate.css)
+
+## 4. License
+- [MIT](./LICENSE)

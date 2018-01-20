@@ -7,10 +7,6 @@ import sim01 from './aag/sim01.aag';
 import strash01 from './aag/strash01.aag';
 import C432 from './aag/C432.aag';
 
-// window.onload = ()=>{
-//   console.log('fuck');
-//   document.querySelector('body').setAttribute("style", "display: block");
-// }
 $(window).on('load', function() {
   document.querySelector('body').setAttribute("style", "display: block");
 });
@@ -31,10 +27,16 @@ function handleFileSelected(event) {
    //error handling
    if(input.files.length === 0) {
     $('#btn').animateCss('shake');
+    document.getElementById("status").innerHTML = 'Please upload a file first.';
+    document.getElementById("image").innerHTML = '';//clear svg
+    document.getElementById("custom-download-btn").setAttribute("style", "display: none");
     return;
    }else
    if(!/.aag/g.test(input.files[0].name)){
     $('#btn').animateCss('shake');
+    document.getElementById("status").innerHTML = 'Sorry.\nThe Format is wrong.';
+    document.getElementById("image").innerHTML = '';//clear svg
+    document.getElementById("custom-download-btn").setAttribute("style", "display: none");
     return;
    }
 
@@ -47,11 +49,14 @@ function handleFileSelected(event) {
      //FIXME throw an error and catch by reader.onerror
      if(max > 500){
         document.getElementById("status").innerHTML = 'Sorry.\nThe File is too big.';
+        document.getElementById("image").innerHTML = '';//clear svg
+        document.getElementById("custom-download-btn").setAttribute("style", "display: none");
         return;
      }
      var svgXml = Viz(digraph, { format: "svg" });
 
      document.getElementById("image").innerHTML = svgXml;
+     $('#image').animateCss('fadeIn');
      document.getElementById("status").innerHTML = input.files[0].name;
      document.getElementById("custom-download-btn").setAttribute("style", "display: inline");
    };
@@ -84,6 +89,7 @@ function handleClickDemo(e){
   var max = obj.max;
   const svgXml = Viz(digraph, { format: "svg" });
   document.getElementById("image").innerHTML = svgXml;
+  $('#image').animateCss('fadeIn');
   document.getElementById("status").innerHTML = fileName;
   document.getElementById("custom-download-btn").setAttribute("style", "display: inline");
 }
