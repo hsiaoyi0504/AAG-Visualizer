@@ -1,11 +1,11 @@
 # A complete guide to build your own visualizer using viz.js and animate.css!
 
-> Visualize Any Graph with Pure Javascript！
-> This tutorial is not specific to visualize circuit, it can apply to any graph you want.
+> You can visualize any graph with pure javascript！
+> This tutorial is not specific to visualize circuit, it can be applied to any graph you want.
 
 <img src="./demo.gif" width="1000"/>
 
-**What is** AAG-Visualizer? What can it do?
+**What is** [AAG-Visualizer](https://byronhsu.github.io/AAG-Visualizer/)? What can it do?
 It is an elegant visualizer which can convert complex circuit format like [AIGER](http://fmv.jku.at/aiger/) (hard to understand to human) into simple and pretty svg with just one click. 
 > Inspration
 > Final project【Fraig】of **Data Structure and Programming** (held by Ric Huang) In National Taiwan University Electrical Engineering Department
@@ -228,6 +228,7 @@ document.getElementById('btn').addEventListener('click', handleFileSelected);
 Why not?** 
 
 ❤ If this post was helpful, please hit the little heart!
+
 And don’t forget to give a star to my repo  🎉 ✨ [AAG-Visualizer](https://github.com/ByronHsu/AAG-Visualizer)
 Any PR and Issue is welcome!
 
