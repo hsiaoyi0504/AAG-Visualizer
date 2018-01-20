@@ -1,5 +1,6 @@
-# Visualize Any Graph with Pure Javascript！
-> A complete guide to build your own visualizer using viz.js and animate.css.
+# A complete guide to build your own visualizer using viz.js and animate.css!
+
+> Visualize Any Graph with Pure Javascript！
 > This tutorial is not specific to visualize circuit, it can apply to any graph you want.
 
 <img src="./demo.gif" width="1000"/>
