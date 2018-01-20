@@ -1,4 +1,4 @@
-# A complete guide to build your own visualizer using viz.js and animate.css!
+# A Complete Guide to Build Your own Visualizer Using Viz.js and Animate.css easily!
 
 > You can visualize any graph with pure javascript！
 > This tutorial is not specific to visualize circuit, it can be applied to any graph you want.
