@@ -1,4 +1,4 @@
-# A complete guide to build your own visualizer using viz.js and animate.css!
+# A Complete Guide to Build Your own Visualizer Using Viz.js and Animate.css easily!
 
 > You can visualize any graph with pure javascript！
 > This tutorial is not specific to visualize circuit, it can be applied to any graph you want.
@@ -78,14 +78,14 @@ npm install viz.js
 
 ```js
 // format of .dot
-var digraph = 'digraph { a -> b; }';
+let digraph = 'digraph { a -> b; }';
 
-//for svg
-var svgXml = Viz(digraph, { format: "svg"});
+// for svg
+let svgXml = Viz(digraph, { format: "svg"});
 document.body.innerHtml = svgXml;
 
-//for img-element
-var img-element = Viz(digraph, { format: "png-image-element"});
+// for img-element
+let img-element = Viz(digraph, { format: "png-image-element"});
 document.body.append(img-element);	 
 ```
 
@@ -105,7 +105,7 @@ And we can see our string magically turns into pretty svg circuit!**
 - parser.js
 
 Use the mightiness of regexp in javascript.You can parse anything with ease.
-Check out this fantastic tutorial!
+Check out this fantastic tutorial!.
 [JavaScript: Learn Regular Expressions for Beginners](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91)
 > Best js regexp tutorial I have ever seen.
 
@@ -129,14 +129,14 @@ export default parser;
 import parser from './js/parser.js'
 
 // format of .dot
-var digraph = parser(data);
+let digraph = parser(data);
 
 //for svg
-var svgXml = Viz(digraph, { format: "svg"});
+let svgXml = Viz(digraph, { format: "svg"});
 document.body.innerHtml = svgXml;
 
 //for img-element
-var img-element = Viz(digraph, { format: format: "png-image-element"});
+let img-element = Viz(digraph, { format: format: "png-image-element"});
 document.body.append(img-element);	
 ```
 
@@ -173,7 +173,7 @@ A super easy library to make fantastic animation on dom object.
 // animate.js
 $.fn.extend({
     animateCss: function (animationName, callback) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        let animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         this.addClass('animated ' + animationName).one(animationEnd, function() {
             $(this).removeClass('animated ' + animationName);
             if (callback) {
